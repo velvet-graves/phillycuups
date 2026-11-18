@@ -1,0 +1,83 @@
+/* ---------- Colors (sampled from the Pagan Potluck logo) ---------- */
+:root {
+  --bg:        #394849;  /* slate green background */
+  --bg-dark:   #293737;  /* darker slate for alternating sections */
+  --mint:      #b7d4ca;  /* headings and main accents */
+  --coral:     #e68a79;  /* links and highlights */
+  --text:      #e8f0ed;  /* body text */
+}
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+h1, h2 {
+  font-family: "Marcellus", Georgia, serif;
+  font-weight: normal;
+  color: var(--mint);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+}
+
+h1 { font-size: 2.6rem; margin: 0 0 0.5rem; }
+h2 { font-size: 1.9rem; margin: 0 0 1.25rem; text-align: center; }
+
+a { color: var(--coral); }
+a:hover, a:focus { color: var(--mint); }
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* ---------- Layout ---------- */
+section { padding: 3.5rem 1.25rem; }
+section:nth-of-type(even) { background: var(--bg-dark); }
+
+.container { max-width: 800px; margin: 0 auto; }
+.center    { text-align: center; }
+
+/* ---------- Welcome ---------- */
+.welcome h1 { text-align: center; }
+
+.location {
+  text-align: center;
+  font-style: italic;
+  color: var(--coral);
+  margin: 0 0 2rem;
+}
+
+.welcome img { margin: 0 auto; border-radius: 6px; }
+
+/* ---------- Mission and covenant ---------- */
+.mission ul { padding-left: 1.5rem; }
+.mission li { margin-bottom: 0.75rem; }
+.mission .agreed { font-style: italic; margin-top: 2rem; }
+
+/* ---------- Potluck ---------- */
+.potluck img { margin: 0 auto; border-radius: 6px; }
+
+/* ---------- Contact and calendar ---------- */
+.contact-email { font-size: 1.2rem; text-align: center; margin-bottom: 2.5rem; }
+
+.calendar iframe {
+  width: 100%;
+  height: 600px;
+  border: 0;
+  background: #fff;
+}
+
+.first-u-logo { margin: 2.5rem auto 0; max-width: 260px; }
+
+footer { text-align: center; padding: 1.5rem; font-size: 0.85rem; background: var(--bg-dark); }
+
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  .calendar iframe { height: 450px; }
+}
